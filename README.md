@@ -4,19 +4,18 @@
 This project focuses on capturing and analyzing live network traffic to understand data flow, protocol structures, and network behavior. Using **Wireshark**, I performed packet sniffing to identify key protocols and troubleshoot network anomalies.
 
 ## 🛠️ Technical Specifications
-*   **Operating System:** Windows (utilizing Npcap)
+*   **Operating System:** Windows 11 (utilizing Npcap)
 *   **Analysis Tool:** Wireshark
-*   **Traffic Sources:** Web Browser (HTTP/TLS), Command Prompt (ICMP/Ping)
-*   **File Format:** `.pcap` (Packet Capture)
+*   **Traffic Sources:** Web Browser (HTTP/TLS)
+*   **File Format:** `.pcapng` (Packet Capture)
 
 ## 🚀 Implementation Steps
 1.  **Interface Selection:** Identified the active network interface and initiated a live capture.
 2.  **Traffic Generation:** 
-    *   Navigated to `http://example.com` to capture unencrypted web traffic.
-    *   Used `ping google.com` to generate ICMP packets.
+    *   Navigated to `[http://example.com](https://www.ilovepdf.com/)` to capture unencrypted web traffic.
 3.  **Protocol Filtering:** Utilized Wireshark's display filter bar to isolate DNS, TCP, and ICMP traffic.
 4.  **Packet Dissection:** Analyzed the encapsulated data across the Ethernet (Layer 2), IP (Layer 3), and TCP/UDP (Layer 4) layers.
-5.  **Data Export:** Successfully exported the capture as a `.pcap` file for documentation.
+5.  **Data Export:** Successfully exported the capture as a `.pcapng` file for documentation.
 
 ## 🔍 Protocol Identification & Analysis
 I successfully identified and analyzed the following protocols:
@@ -29,11 +28,6 @@ I successfully identified and analyzed the following protocols:
 ## ⚠️ Network Observations
 During the analysis, I identified **Black and Red packets** indicating network stressors:
 *   **TCP Retransmissions (Black Rows):** Signaled packet loss or delays, where the system attempted to resend data.
+   ![TCP Retransmissions](./TCP_Retransmissions.png)
 *   **Connection Resets (Red Text):** Showed `RST` flags where a connection was forcefully closed by a host.
-
-## 📁 Repository Files
-*   `analysis_capture.pcap`: The raw data file containing the captured packets.
-*   `README.md`: Project documentation and methodology.
-
----
-*Completed as part of a Network Security learning exercise.*
+   ![Connection Resets](./Connection_Reset.png)
