@@ -28,6 +28,6 @@ I successfully identified and analyzed the following protocols:
 ## ⚠️ Network Observations
 During the analysis, I identified **Black and Red packets** indicating network stressors:
 *   **TCP Retransmissions (Black Rows):** Signaled packet loss or delays, where the system attempted to resend data.
- (./TCP_Retransmissions.png)
+   ![TCP Retransmissions](./TCP_Retransmissions.png)
 *   **Connection Resets (Red Text):** Showed `RST` flags where a connection was forcefully closed by a host.
    ![Connection Resets](./Connection_Reset.png)
